@@ -1,0 +1,11 @@
+
+# Set default behavior to LF, in case `.gitattributes` is overridden in specific directories
+* text eol=lf
+
+# Explicitly declare files that should always use CRLF on checkout
+*.sln text eol=crlf
+
+# Declare files that should not be normalized (binary files)
+*.png binary
+*.jpg binary
+*.gif binary
