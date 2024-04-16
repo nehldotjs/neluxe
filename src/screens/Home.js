@@ -1,11 +1,9 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import ScreenDetector from "../components/ScreenDetector";
 
 function Home() {
-  return (
-    <div style={styles.header}>
-      <h1>HOME SCREEN</h1>
-    </div>
-  );
+  const { screenWidth } = ScreenDetector();
+  return <div>{screenWidth}</div>;
 }
 
 export default Home;

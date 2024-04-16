@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 function Nav() {
   return (
     <div className="navLinksWrapper" style={styles.header}>
-      <Link to="/">Home</Link> {/* Use "/" instead of "/home" */}
-      <Link to="/about">About</Link> {/* Use "/about" instead of "/About" */}
+      <Link to="/">Home</Link>
+      <Link to="/about">About</Link>
     </div>
   );
 }
