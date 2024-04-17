@@ -1,9 +1,16 @@
 import React, { useState, useEffect } from "react";
 import ScreenDetector from "../components/ScreenDetector";
 
+import "../styles/home.css"
+
+
 function Home() {
   const { screenWidth } = ScreenDetector();
-  return <div>{screenWidth}</div>;
+  return (
+    <div className="homeWrapper">
+   
+    </div>
+  );
 }
 
 export default Home;

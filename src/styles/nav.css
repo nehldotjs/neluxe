@@ -1,0 +1,83 @@
+.navLinksWrapper {
+    height: auto;
+    justify-content: space-around;
+    padding: 15px 0px;
+    align-items: center;
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+
+}
+
+.navLinksWrapper p {
+    margin: auto;
+    display: flex;
+    font-size: 15px;
+ }
+
+.hr {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: gray;
+    border: none;
+    height: 1px;
+}
+
+.logoWrapper {
+    height: 50px;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.logoWrapper .logoLink {
+    display: flex;
+    height: 100%;
+    width: auto;
+}
+
+.logoWrapper .logoLink img {
+    display: flex;
+    object-fit: contain;
+    height: 100%;
+    width: auto;
+    margin: auto;
+}
+
+.linksWrapper {
+    text-decoration: none;
+    display: flex;
+    width: 40%;
+    height: auto;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.navigationBtn {
+    text-decoration: none;
+    font-size: 15px;
+    color: #363636;
+    font-weight: normal;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.navigationBtn::before {
+    content: "";
+    height: 2px;
+    display: flex;
+    position: absolute;
+    background-color: #363636;
+    width: 0%;
+    bottom: 0px;
+    transition: 350ms all ease;
+}
+
+.navigationBtn:hover::before {
+    width: 100%;
+    display: flex;
+}
