@@ -1,19 +1,102 @@
 .navLinksWrapper {
-    height: auto;
-    justify-content: space-around;
-    padding: 15px 0px;
-    align-items: center;
     display: flex;
-    gap: 15px;
     flex-direction: column;
+    height: auto;
+    width: 100%;
+    position: relative;
+}
+
+.navSecondaryWrapper {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 15px 0px;
+    display: flex;
+    height: auto;
+    gap: 15px;
+    z-index: 999;
+
+    position: relative;
+    background-color: #f8f8f8;
 
 }
 
-.navLinksWrapper p {
-    margin: auto;
+.navSecondaryWrapper p {
     display: flex;
-    font-size: 15px;
- }
+    margin: auto;
+    font-size: 10px;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    word-spacing: 20px;
+}
+
+.searchInputContainer {
+    width: 100%;
+    height: auto;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: green;
+
+}
+
+.searchInputContainer .inputWrapper {
+    display: flex;
+    height: 100px;
+    width: 80%;
+    background-color: #f8f8f8;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 1;
+    border-radius: 0px 0px 10px 10px;
+    padding: 0px 10%;
+
+    overflow: hidden;
+    transition: all 350ms ease-in-out;
+}
+
+.inputTransform {
+    transform: translateY(-100%);
+
+}
+
+.inputSecondaryWrapper {
+    display: flex;
+    width: 100%;
+    border-bottom: 1px solid #363636;
+}
+
+.searchInput {
+    width: 100%;
+    height: 50px;
+    border: none;
+    background-color: transparent;
+    display: flex;
+    outline: none;
+    font-size: 20px;
+    padding-left: 10px;
+}
+
+.searchInputBtn {
+    display: flex;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background: transparent;
+}
+
+.searchInputIcon {
+    color: #363636;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
 
 .hr {
     display: flex;
@@ -48,10 +131,76 @@
     margin: auto;
 }
 
+.navigationSection {
+    width: 100%;
+    margin: auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 20px;
+    padding: 0px 40px;
+    /* background-color: red; */
+
+}
+
+
+.searchBar {
+    display: flex;
+    height: auto;
+    flex: 1;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 0px 2px;
+}
+
+.searchContainer {
+    display: flex;
+    width: 100%;
+
+}
+
+.searchIconWrapper {
+    display: flex;
+    height: auto;
+    width: auto;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.searchBtnIcon {
+    display: flex;
+    border: none;
+    width: auto;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px;
+    background: transparent;
+}
+
+.searchIcon {
+    width: auto;
+    height: auto;
+    font-size: 15px;
+    color: #8d8d8d;
+    transition: all 350ms ease-in-out;
+}
+
+.searchIcon:hover {
+    color: #363636;
+}
+
+/* ______________________________________________________________________ */
+
 .linksWrapper {
     text-decoration: none;
     display: flex;
-    width: 40%;
+    flex: 1;
     height: auto;
     align-items: center;
     justify-content: space-evenly;
@@ -80,4 +229,54 @@
 .navigationBtn:hover::before {
     width: 100%;
     display: flex;
+}
+
+.cartWrapper {
+    display: flex;
+    height: 100%;
+    flex: 1;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.cartWrapper .cart,
+.cartWrapper .wishList {
+    background: transparent;
+    display: flex;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    padding-bottom: 2px;
+}
+
+.cartWrapper .currencyContainer,
+.cartWrapper .AuthContainer {
+    background: transparent;
+    font-size: 12px;
+    font-weight: bolder;
+    cursor: pointer;
+    display: flex;
+    border: none;
+    position: relative;
+    width: auto;
+    justify-content: flex-start;
+    align-items: flex-end;
+    padding-bottom: 2px;
+    letter-spacing: 2px;
+    outline: none;
+}
+.cartWrapper .AuthContainer::after {
+    position: absolute;
+    display: flex;
+    content: "";
+    height: 2px;
+    width: 0px;
+    bottom: 0px;
+    background-color: #363636;
+    transition: all 350ms ease-in-out;
+}
+
+.cartWrapper .AuthContainer:hover::after {
+    width: 100%;
 }

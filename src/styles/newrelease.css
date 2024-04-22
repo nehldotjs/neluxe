@@ -1,0 +1,72 @@
+.nr-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 0px 10%;
+}
+
+.nr-header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: auto;
+}
+
+.nr-header-container button {
+    position: relative;
+    display: flex;
+    background: none;
+    border: none;
+    color: black;
+    transition: 350ms all ease;
+    cursor: pointer;
+    width: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.nr-header-container button:hover {
+    color: white;
+}
+
+.nr-header-container button h5 {
+    display: flex;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    padding: 5px 8px;
+    z-index: 1;
+    text-align: center;
+
+}
+
+.nr-header-container button::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    background-color: black;
+    transition: 350ms all ease;
+    width: 0%;
+    left: 0px;
+}
+
+.nr-header-container button:hover:after {
+    width: 100%;
+}
+
+.nr-productsWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    width: 100%;
+    height: auto;
+    background-color: aquamarine;
+    justify-content: space-between;
+}
+
+.nr-productsWrapper .nr-products {
+    height: 350px;
+    width: 250px;
+    background-color: blueviolet;
+}
