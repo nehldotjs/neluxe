@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import "../styles/newrelease.css";
 import { BsDisplay } from "react-icons/bs";
 
 function NewRelease() {
+  const [isDrpDwn, setIsDrpDwn] = useState(false);
   return (
     <div className="nr-wrapper">
       <div className="nr-header-container">
@@ -16,7 +17,21 @@ function NewRelease() {
         <h1>world</h1>
       </marquee> */}
       <div className="nr-productsWrapper">
-        <div className="nr-products">cloths</div>
+        <div
+          className="nr-products"
+          onMouseEnter={() => setIsDrpDwn(true)}
+          onMouseLeave={() => setIsDrpDwn(!isDrpDwn)}>
+          <div 
+            onMouseEnter={() => setIsDrpDwn(true)}
+            className={
+              isDrpDwn
+                ? "nr-product-card-dropdown"
+                : "nr-product-card-dropdown nr-product-card-dropdown-transform "
+            }>
+            {" "}
+            shop options
+          </div>
+        </div>
       </div>
     </div>
   );
