@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import "../styles/newrelease.css";
-import { BsDisplay } from "react-icons/bs";
-
+import { BsHeart } from "react-icons/bs";
+import { FaBagShopping, FaEye } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 function NewRelease() {
   const [isDrpDwn, setIsDrpDwn] = useState(false);
   return (
@@ -21,15 +22,18 @@ function NewRelease() {
           className="nr-products"
           onMouseEnter={() => setIsDrpDwn(true)}
           onMouseLeave={() => setIsDrpDwn(!isDrpDwn)}>
-          <div 
+          <div
             onMouseEnter={() => setIsDrpDwn(true)}
             className={
               isDrpDwn
                 ? "nr-product-card-dropdown"
                 : "nr-product-card-dropdown nr-product-card-dropdown-transform "
             }>
-            {" "}
-            shop options
+            <Link to="/item">
+              <FaEye />
+            </Link>
+            <FaBagShopping />
+            <BsHeart />
           </div>
         </div>
       </div>

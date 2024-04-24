@@ -1,0 +1,176 @@
+.IR-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2% 10%;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 10px;
+    /* border-top: 1px solid #383838; */
+}
+
+
+.ir-section1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    padding-right: 5%;
+    flex: 1;
+    height: 100%;
+    color: #3d3b3b;
+}
+
+.itemNameWrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.itemNameWrapper button {
+    border: none;
+    display: flex;
+    background: transparent;
+    cursor: pointer;
+    width: auto;
+    height: auto;
+    font-size: 20px;
+}
+
+.itemName {
+    display: flex;
+    font-weight: bold;
+    word-spacing: 5px;
+    letter-spacing: 2px;
+}
+
+.itemPriceWrapper {
+    width: 100%;
+    display: flex;
+    font-size: 15px;
+    letter-spacing: 2px;
+}
+
+.productInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.productDetails {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 10px;
+}
+
+.productDetails button {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+}
+
+
+.productDetailsHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+
+}
+
+.productDetailInformationWrapper {
+    width: 100%;
+    height: auto;
+    display: flex;
+    position: relative;
+    border-bottom: 1px solid #383838;
+    background-color: red;
+    position: absolute;
+}
+
+.productDetailInformation {
+    position: relative;
+    display: flex;
+    height: auto;
+    top: 0px;
+}
+
+.close {
+    /* height: 0px; */
+}
+
+.productShippingAndReturnsPolicy {
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.productShippingAndReturnsPolicy button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+}
+
+.shippingAndReturnContainer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.productInfo p {
+    font-size: 15px;
+    display: flex;
+
+}
+
+.productInfo ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.productInfo ul li {
+    font-size: 12px;
+    display: flex;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ____________________________________________ */
+
+.ir-section2 {
+    display: flex;
+    flex: 3;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: orangered;
+}
