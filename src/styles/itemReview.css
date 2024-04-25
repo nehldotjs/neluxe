@@ -18,8 +18,17 @@
     gap: 20px;
     padding-right: 5%;
     flex: 1;
-    height: 100%;
+    height: auto;
     color: #3d3b3b;
+    overflow: hidden;
+}
+
+.irNameAndPriceWrapper {
+    display: flex;
+    flex-direction: column;
+
+    background-color: #f8f8f8;
+    width: 100%;
 }
 
 .itemNameWrapper {
@@ -93,11 +102,13 @@
 .productDetailInformationWrapper {
     width: 100%;
     height: auto;
+    bottom: 0px;
     display: flex;
     position: relative;
     border-bottom: 1px solid #383838;
-    background-color: red;
-    position: absolute;
+    position: relative;
+    z-index: -1;
+
 }
 
 .productDetailInformation {
@@ -105,11 +116,12 @@
     display: flex;
     height: auto;
     top: 0px;
+    padding: 5px;
+    background-color: red;
 }
 
-.close {
-    /* height: 0px; */
-}
+/* .close { 
+} */
 
 .productShippingAndReturnsPolicy {
     gap: 10px;

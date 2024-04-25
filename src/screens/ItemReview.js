@@ -15,14 +15,17 @@ function ItemReview() {
   return (
     <div className="IR-container">
       <div className="ir-section1">
-        <div className="itemNameWrapper">
-          <p className="itemName">DOLCE GABANA</p>
-          <button onClick={() => setState({ ...state, isLike: !state.isLike })}>
-            {!state.isLike ? <FaRegHeart /> : <FaHeart />}
-          </button>
-        </div>
-        <div className="itemPriceWrapper">
-          <p className="itemPrice">2 billion dollars</p>
+        <div className="irNameAndPriceWrapper">
+          <div className="itemNameWrapper">
+            <p className="itemName">DOLCE GABANA</p>
+            <button
+              onClick={() => setState({ ...state, isLike: !state.isLike })}>
+              {!state.isLike ? <FaRegHeart /> : <FaHeart />}
+            </button>
+          </div>
+          <div className="itemPriceWrapper">
+            <p className="itemPrice">2 billion dollars</p>
+          </div>
         </div>
 
         <div className="productInfo">
@@ -44,7 +47,7 @@ function ItemReview() {
                 className={
                   state.isProductDetails
                     ? "productDetailInformation "
-                    : " productDetailInformation close "
+                    : "productDetailInformation close"
                 }>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure
                 quam illo vel mollitia facilis nihil nesciunt explicabo tempore
