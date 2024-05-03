@@ -1,21 +1,39 @@
 import React, { useState } from "react";
 import "../styles/itemReview.css";
 
-import { FaRegHeart, FaHeart } from "react-icons/fa6";
+import { FaRegHeart, FaHeart, FaPlus } from "react-icons/fa";
 import { BiPlus, BiMinus } from "react-icons/bi";
+import { FaCheck } from "react-icons/fa";
 
 import Shoe from "../assets/shoe.jpg";
-import ProductQuery from "../components/ProductQuery";
+import { FaMinus } from "react-icons/fa6";
 
 function ItemReview() {
-  const product = ProductQuery();
-
-  console.log(product)
   const [uiState, setUiState] = useState({
     isLike: false,
     isProductDetails: false,
     isShippingReturn: false
   });
+
+  const [selectedOption, setSelectedOption] = useState({
+    color: null,
+    size: null,
+    available: 0
+  });
+
+  const handleOptionClick = (option) => {
+    setSelectedOption({
+      ...selectedOption,
+      color: option
+    });
+  };
+
+  const handleSelectSize = (option) => {
+    setSelectedOption({
+      ...selectedOption,
+      size: option
+    });
+  };
 
   const toggleProductDetails = () => {
     setUiState({
@@ -37,7 +55,7 @@ function ItemReview() {
         <div className="ir-section1">
           <div className="irNameAndPriceWrapper">
             <div className="itemNameWrapper">
-              <p className="itemName">DOLCE GABANA</p>
+              <p className="itemName">Norman Mason</p>
               <button
                 onClick={() =>
                   setUiState({ ...uiState, isLike: !uiState.isLike })
@@ -68,10 +86,9 @@ function ItemReview() {
                   : "productDetailInformation close"
               }>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure
-                quam illo vel mollitia facilis nihil nesciunt explicabo tempore
-                veritatis, nemo atque labore earum distinctio unde perspiciatis
-                repellat quidem libero option ?
+                trip wrote box death person rear determine doing lamp per lion
+                muscle physical consonant selection read social camp light bill
+                pair sure enter good
               </p>
             </div>
             <div
@@ -104,18 +121,59 @@ function ItemReview() {
           </div>
         </div>
 
-        {/* _______________________________________________________________________________ */}
-
         <div className="ir-section2">
           <div className="ir-productImageWrapper">
             <img src={Shoe} alt="" />
           </div>
 
           <div className="ir-ProductColorPallet">
-            <div className="ir-productColorWrapper">color</div>
-            <div className="ir-productSizeWrapper">size</div>
-            <div className="ir-productStockAvailability">available</div>
-            <div className="ir-productOrderAmount">Amount</div>
+            <div className="ir-productColorWrapper">
+              <p>Select Color</p>
+              <div className="ir-productColorContainer">
+                <button
+                  className={`colorButton ${
+                    selectedOption.color === "option3" ? "selected" : ""
+                  }`}
+                  style={{ backgroundColor: "orange" }}
+                  onClick={() => handleOptionClick("option3")}>
+                  {selectedOption.color === "option3" && <FaCheck />}
+                </button>
+              </div>
+            </div>
+            <div className="ir-productSizeWrapper">
+              <p>Select Size</p>
+              <button onClick={() => handleSelectSize("XL")}>
+                XL
+                {selectedOption.size === "XL" && (
+                  <div className="ir-productSizeChecker">
+                    <FaCheck className="colorCheck" />
+                  </div>
+                )}
+              </button>
+              {/* Add similar buttons for other size options */}
+            </div>
+            <div className="ir-productStockAvailability">
+              <p>
+                Availability :{" "}
+                <span
+                  style={{
+                    color: selectedOption.available === 0 ? "red" : " green"
+                  }}>
+                  {selectedOption.available} in stock
+                </span>{" "}
+              </p>
+            </div>
+            <div className="ir-productOrderAmount">
+              <div className="ir-orderNumberBtnWrapper">
+                <button>
+                  <FaMinus />
+                </button>{" "}
+                <p>0</p>{" "}
+                <button>
+                  <FaPlus />
+                </button>
+              </div>
+            </div>
             <div className="ir-addToCartButton">Add TO CART bTN</div>
           </div>
         </div>
