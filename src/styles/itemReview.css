@@ -18,15 +18,14 @@
     padding-right: 5%;
     gap: 20px;
     flex: 1;
-    height: auto;
+    height: 100%;
     color: #3d3b3b;
-    overflow: hidden;
+     overflow: hidden;
 }
 
 .irNameAndPriceWrapper {
     display: flex;
     flex-direction: column;
-    background-color: #f8f8f8;
     width: 100%;
 }
 
@@ -65,7 +64,7 @@
 .productInfo {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    position: relative;
 }
 
 .productDetails {
@@ -75,7 +74,9 @@
     justify-content: center;
     align-items: flex-end;
     gap: 10px;
-}
+    height: 30px;
+    width: 100%;
+ }
 
 .productDetails button {
     display: flex;
@@ -107,18 +108,19 @@
 .productDetailInformation {
     position: relative;
     display: flex;
-    height: auto;
+    height: 200px;
     width: 100%;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .productShippingAndReturnsPolicy {
-    gap: 10px;
+    position: relative;
+    /* gap: 10px; */
     display: flex;
     flex-direction: column;
-    height: 150px;
-    background-color: #f8f8f8;
-    padding-top: 5px;
+    height: 200px;
+    width: 100%;
+    /* padding-top: 5px; */
     transform: translateY(0%);
     transition: all 350ms ease-in-out;
     border-top: 1px solid #3d3b3b;
@@ -140,20 +142,32 @@
 
 .shippingAndReturnContainer {
     width: 100%;
+    height: 30px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    background-color: #f8f8f8;
+}
+
+.productInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 100%;
 }
 
 .productInfo p {
+    background-color: #f8f8f8;
     font-size: 15px;
     display: flex;
-
+    
 }
 
 .productInfo ul {
     display: flex;
     flex-direction: column;
+    background-color: #f8f8f8;
     gap: 10px;
     position: relative;
     overflow: hidden;
@@ -166,7 +180,7 @@
 
 .ulOverlay {
     background-color: #f8f8f8;
-    position: absolute;
+     position: absolute;
     height: 100%;
     width: 100%;
     display: flex;
@@ -289,4 +303,51 @@
     position: absolute;
     z-index: 1;
     margin: auto;
+}
+
+.ir-orderNumberBtnWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: auto;
+}
+
+.ir-orderNumberBtnWrapper p {
+    background-color: #f8f8f8;
+    color: rgb(57, 128, 156);
+    width: 50px;
+    display: flex;
+    margin: 0px 20px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.ir-orderNumberBtnWrapper button {
+    height: 20px;
+    width: 40px;
+    background-color: #0f0f0f;
+    border: none;
+    color: white;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.ir-addToCartButton {
+    width: 100%;
+    height: auto;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.ir-addToCartButton button {
+    border: none;
+    display: flex;
+    color: white;
+    cursor: pointer;
+    padding: 10px 20px;
+    background-color: #0f0f0f;
 }

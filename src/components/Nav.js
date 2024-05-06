@@ -55,7 +55,10 @@ function Nav() {
                 NGN
               </option>
             </select>
-            <button className="AuthContainer">LOGIN</button>
+            
+            <Link className="AuthContainer" to="/login">
+              LOGIN
+            </Link>
 
             <button className="wishList">
               <FaShoppingBag />

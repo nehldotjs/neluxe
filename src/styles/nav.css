@@ -265,7 +265,10 @@
     padding-bottom: 2px;
     letter-spacing: 2px;
     outline: none;
+    text-decoration: none;
+    color: #363636;
 }
+
 .cartWrapper .AuthContainer::after {
     position: absolute;
     display: flex;

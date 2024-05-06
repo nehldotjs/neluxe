@@ -7,6 +7,7 @@ import { FaCheck } from "react-icons/fa";
 
 import Shoe from "../assets/shoe.jpg";
 import { FaMinus } from "react-icons/fa6";
+import Discovery from "../components/Discovery";
 
 function ItemReview() {
   const [uiState, setUiState] = useState({
@@ -18,8 +19,22 @@ function ItemReview() {
   const [selectedOption, setSelectedOption] = useState({
     color: null,
     size: null,
-    available: 0
+    available: 2,
+    amount: 1
   });
+
+  const handleAmountIncrease = (option) => {
+    setSelectedOption({
+      ...selectedOption,
+      amount: option + 1
+    });
+  };
+  const handleAmountDecrease = (option) => {
+    setSelectedOption({
+      ...selectedOption,
+      amount: option - 1
+    });
+  };
 
   const handleOptionClick = (option) => {
     setSelectedOption({
@@ -49,6 +64,7 @@ function ItemReview() {
     });
   };
 
+  console.log(uiState.isProductDetails);
   return (
     <>
       <div className="IR-container">
@@ -157,27 +173,46 @@ function ItemReview() {
                 Availability :{" "}
                 <span
                   style={{
+                    textTransform: "uppercase",
                     color: selectedOption.available === 0 ? "red" : " green"
                   }}>
                   {selectedOption.available} in stock
-                </span>{" "}
+                  {selectedOption.available > 1 ? "s" : ""}
+                </span>
               </p>
             </div>
             <div className="ir-productOrderAmount">
               <div className="ir-orderNumberBtnWrapper">
-                <button>
+                <button
+                  disabled={selectedOption.amount === 1}
+                  style={{
+                    backgroundColor:
+                      selectedOption.amount === 1 ? "gray" : "#0f0f0f"
+                  }}
+                  onClick={() => handleAmountDecrease(selectedOption.amount)}>
                   <FaMinus />
-                </button>{" "}
-                <p>0</p>{" "}
-                <button>
+                </button>
+                <p>{selectedOption.amount}</p>
+                <button
+                  style={{
+                    backgroundColor:
+                      selectedOption.amount === selectedOption.available
+                        ? "gray"
+                        : "#0f0f0f"
+                  }}
+                  disabled={selectedOption.amount === selectedOption.available}
+                  onClick={() => handleAmountIncrease(selectedOption.amount)}>
                   <FaPlus />
                 </button>
               </div>
             </div>
-            <div className="ir-addToCartButton">Add TO CART bTN</div>
+            <div className="ir-addToCartButton">
+              <button>ADD TO CART</button>
+            </div>
           </div>
         </div>
       </div>
+      <Discovery/>
     </>
   );
 }
