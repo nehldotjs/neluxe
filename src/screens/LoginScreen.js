@@ -4,7 +4,12 @@ import "../styles/login.css";
 function LoginScreen() {
   return (
     <div className="login-wrapper">
-      <h1>LOGIN SCREEN</h1>
+      <div className="backgroundImageWrapper">
+        <h3>background image</h3>
+      </div>
+      <div className="signUpForm">
+        <h3>sign up form </h3>
+      </div>
     </div>
   );
 }

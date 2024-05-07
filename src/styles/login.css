@@ -1,10 +1,22 @@
 .login-wrapper {
     display: flex;
     width: 100%;
-    height: auto;
+    height: 50vh;
     align-items: center;
     justify-content: center;
-    padding: 2% 10%;
+    padding: 2% 0%;
+    position: relative;
 
-    background-color: aqua;
+    background-color: orangered;
+}
+
+.backgroundImageWrapper,
+.signUpForm {
+    display: flex;
+    flex: 1;
+    height: 100%;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    background-color: pink;
 }
