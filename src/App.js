@@ -10,7 +10,6 @@ function App() {
     <Router>
       <Nav />
       <ScreenHandler />
-
       <Footer/>
     </Router>
   );

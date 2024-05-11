@@ -42,7 +42,7 @@ function Nav() {
               About
             </Link>
             <Link className="navigationBtn" to="/contact">
-              Contact
+              OUR STORE
             </Link>
           </div>
 

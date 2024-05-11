@@ -6,6 +6,7 @@
     width: 100%;
     padding: 5% 10%;
     gap: 30px;
+    z-index: 1; 
 }
 
 .footerContainer hr {
@@ -29,6 +30,7 @@
     align-items: flex-end;
     width: 100%;
     height: auto;
+    z-index: 1;
 }
 
 .subscribeWrapper {
@@ -109,6 +111,7 @@
     align-items: flex-start;
     width: 100%;
     height: auto;
+    z-index: 1;
 }
 
 .f-group {
