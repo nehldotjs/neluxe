@@ -5,29 +5,19 @@ function ProductQuery() {
   const [product, setProduct] = useState({});
 
   useEffect(() => {
-    const fetchData = async () => {
-      const options = {
-        method: "GET",
-        url: "https://apidojo-forever21-v1.p.rapidapi.com/categories/v2/list",
-        headers: {
-          "X-RapidAPI-Key":
-            "0fe300dfe1msh8c2774bc91978c4p1bb272jsnb45f9a5bd2d2",
-          "X-RapidAPI-Host": "apidojo-forever21-v1.p.rapidapi.com"
-        }
-      };
-
+    async function fetchProductData() {
       try {
-        const response = await axios.request(options);
+        const response = await axios.get("https://fakestoreapi.com/products");
         setProduct(response.data);
       } catch (error) {
-        console.error(error);
+        console.error("Error fetching product data:", error);
       }
-    };
+    }
 
-    fetchData();
+    fetchProductData();
   }, []);
 
-  return { product };
+  return {product};
 }
 
 export default ProductQuery;

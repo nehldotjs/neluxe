@@ -16,14 +16,14 @@ function ScreenHandler() {
   return (
     <Routes>
       {user ? (
-        <> 
-          <Route path="/" exact element={<Home />} />
+        <>
+          <Route path="/neluxe/" exact element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/item" element={<ItemReview />} />
           <Route path="/login" element={<LoginScreen />} />
           <Route path="/signup" element={<SignUpScreen />} />
-         </>
+        </>
       ) : (
         <>
           <Route path="/adminDashBoard" element={<Dashboard />} />

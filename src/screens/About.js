@@ -1,9 +1,13 @@
 import React from "react";
-
+import Error from "../components/Error";
+import ProductQuery from "../components/ProductQuery";
 function About() {
+  const { productData } = ProductQuery();
+  console.log(productData);
+
   return (
     <div>
-      <h1>ABOUT SCREEN</h1>
+      <Error />
     </div>
   );
 }

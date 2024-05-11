@@ -14,7 +14,7 @@ function Nav() {
         <p>Welcome to our store</p>
         <hr className="hr" />
         <div className="logoWrapper">
-          <Link className="logoLink">
+          <Link to="/neluxe/" className="logoLink">
             <img src={logo} alt="" />
           </Link>
         </div>
@@ -35,11 +35,11 @@ function Nav() {
           {/* ______________________________________________________________________________ */}
 
           <div className="linksWrapper">
-            <Link className="navigationBtn" to="/">
-              Home
+            <Link className="navigationBtn" to="/neluxe/">
+              HOME
             </Link>
             <Link className="navigationBtn" to="/about">
-              About
+              ABOUT
             </Link>
             <Link className="navigationBtn" to="/contact">
               OUR STORE
@@ -55,7 +55,7 @@ function Nav() {
                 NGN
               </option>
             </select>
-            
+
             <Link className="AuthContainer" to="/login">
               LOGIN
             </Link>

@@ -5,9 +5,8 @@ import "../styles/home.css";
 
 import heroImg from "../assets/pexels-artem-podrez-5726806.jpg";
 import NewRelease from "../components/NewRelease";
-
 function Home() {
-  const { screenWidth } = ScreenDetector();
+  // const { screenWidth } = ScreenDetector();
   return (
     <div className="homeWrapper">
       <div className="heroSection-Wrapper">
@@ -18,17 +17,9 @@ function Home() {
         </div>
         <img src={heroImg} alt="pexels-artem-podrez-5726806.jpg" />
       </div>
-      <NewRelease/>
+      <NewRelease />
     </div>
   );
 }
 
 export default Home;
-
-const styles = {
-  header: {
-    gap: "20px",
-    display: "flex",
-    width: "100%"
-  }
-};
