@@ -8,9 +8,7 @@ import ProductQuery from "../components/ProductQuery";
 
 function NewRelease() {
   const [isDrpDwn, setIsDrpDwn] = useState({});
-  const { product } = ProductQuery();
-
-  console.log(product);
+  const { products } = ProductQuery();
 
   const handleMouseEnter = (id) => {
     setIsDrpDwn((prevState) => ({ ...prevState, [id]: true }));
@@ -27,7 +25,41 @@ function NewRelease() {
           <h5>EXPLORE All</h5>
         </button>
       </div>
-      <div className="nr-productsWrapper"></div>
+      <div className="nr-productsWrapper">
+        {products.map((x) => {
+          const { id, title, price, description, category, image, reating } = x;
+          return (
+            <div
+              key={id}
+              className="nr-products"
+              onMouseEnter={() => handleMouseEnter(id)}
+              onMouseLeave={() => handleMouseLeave(id)}>
+              <div className="nr-productImageWrapper">
+                <img src={image} alt="" />
+              </div>
+
+              <div
+                className={
+                  isDrpDwn[id]
+                    ? "nr-product-card-dropdown"
+                    : "nr-product-card-dropdown nr-product-card-dropdown-transform"
+                }>
+                <div className="nr-productDetails">
+                  <p className="nr-productDetailsTitle">{title}</p>
+                  <p className="nr-productDetailsPrice">$ {price}</p>
+                </div>
+                <div className="nr-productDetails-icons">
+                  <Link to="/item">
+                    <FaEye />
+                  </Link>
+                  <FaBagShopping />
+                  <BsHeart />
+                </div>
+              </div>
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 }

@@ -2,13 +2,13 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 
 function ProductQuery() {
-  const [product, setProduct] = useState({});
+  const [products, setProducts] = useState([]);
 
   useEffect(() => {
     async function fetchProductData() {
       try {
         const response = await axios.get("https://fakestoreapi.com/products");
-        setProduct(response.data);
+        setProducts(response.data);
       } catch (error) {
         console.error("Error fetching product data:", error);
       }
@@ -17,7 +17,7 @@ function ProductQuery() {
     fetchProductData();
   }, []);
 
-  return {product};
+  return{ products}
 }
 
 export default ProductQuery;
