@@ -4,14 +4,17 @@ import "./App.css";
 import ScreenHandler from "./ScreenHandler";
 import Nav from "./components/Nav";
 import Footer from "./screens/Footer";
+import { ItemProvider } from "./contexts/ItemProvider";
 
 function App() {
   return (
-    <Router>
-      <Nav />
-      <ScreenHandler />
-      <Footer/>
-    </Router>
+    <ItemProvider>
+      <Router>
+        <Nav />
+        <ScreenHandler />
+        <Footer />
+      </Router>
+    </ItemProvider>
   );
 }
 

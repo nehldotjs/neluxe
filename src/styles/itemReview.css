@@ -20,20 +20,22 @@
     flex: 1;
     height: 100%;
     color: #3d3b3b;
-     overflow: hidden;
+    overflow: hidden;
 }
 
 .irNameAndPriceWrapper {
     display: flex;
     flex-direction: column;
     width: 100%;
+    gap: 10px;
 }
 
 .itemNameWrapper {
     width: 100%;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
+    gap: 20px;
 
 }
 
@@ -42,16 +44,15 @@
     display: flex;
     background: transparent;
     cursor: pointer;
-    width: auto;
     height: auto;
-    font-size: 20px;
 }
 
 .itemName {
+    flex: 1;
     display: flex;
     font-weight: bold;
+    font-size: 12px;
     word-spacing: 5px;
-    letter-spacing: 2px;
 }
 
 .itemPriceWrapper {
@@ -61,10 +62,16 @@
     letter-spacing: 2px;
 }
 
+.itemPrice {
+    color: #3d3b3b;
+    font-weight: bold;
+}
+
 .productInfo {
     display: flex;
     flex-direction: column;
     position: relative;
+    height: auto;
 }
 
 .productDetails {
@@ -76,7 +83,7 @@
     gap: 10px;
     height: 30px;
     width: 100%;
- }
+}
 
 .productDetails button {
     display: flex;
@@ -96,31 +103,38 @@
     width: 100%;
 }
 
-.productDetailInformationWrapper {
-    z-index: -1;
-    bottom: 0px;
-    width: 100%;
-    height: auto;
-    display: flex;
+.productDetails-info-writeup-wrapper {
+    background-color: yellow;
     position: relative;
-}
-
-.productDetailInformation {
-    position: relative;
-    display: flex;
-    height: 200px;
+    height: 100%;
     width: 100%;
     /* overflow: hidden; */
 }
 
+
+.productDetailInformation {
+    position: relative;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    background-color: pink;
+    overflow-y: scroll;
+}
+
+.productDetailInformation p {
+    display: flex;
+    background-color: green;
+    font-size: 12px;
+    padding-right: 10px;
+}
+
 .productShippingAndReturnsPolicy {
     position: relative;
-    /* gap: 10px; */
     display: flex;
     flex-direction: column;
-    height: 200px;
+    height: 100%;
     width: 100%;
-    /* padding-top: 5px; */
+    background-color: #f8f8f8;
     transform: translateY(0%);
     transition: all 350ms ease-in-out;
     border-top: 1px solid #3d3b3b;
@@ -161,7 +175,7 @@
     background-color: #f8f8f8;
     font-size: 15px;
     display: flex;
-    
+
 }
 
 .productInfo ul {
@@ -180,7 +194,7 @@
 
 .ulOverlay {
     background-color: #f8f8f8;
-     position: absolute;
+    position: absolute;
     height: 100%;
     width: 100%;
     display: flex;
@@ -203,18 +217,26 @@
     height: 100%;
     justify-content: space-between;
     align-items: flex-start;
-    gap: 10px;
 }
 
 .ir-productImageWrapper {
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     height: 100%;
     flex: 2;
     overflow: hidden;
-
     display: flex;
     background-color: #f8f8f8;
+
+}
+
+.ir-productImageWrapper-container {
+    padding: 30px;
+    height: 100%;
+    width: 80%;
+    display: flex;
+    background-color: white;
+
 }
 
 .ir-productImageWrapper img {
@@ -227,7 +249,7 @@
 
 .ir-ProductColorPallet {
     height: auto;
-    width: 100%;
+    width: auto;
     flex: 1;
     gap: 30PX;
     display: flex;

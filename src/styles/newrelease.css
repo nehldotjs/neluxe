@@ -57,23 +57,20 @@
 
 .nr-productsWrapper {
     display: flex;
-    flex-wrap: wrap;
     width: 100%;
     height: auto;
-    gap: 30px;
     align-items: center;
     justify-content: center;
 }
 
 .nr-products {
-    height: 300px;
-    width: 250px;
+    height: 250px;
+    width: auto;
     display: flex;
     flex-direction: column;
     position: relative;
     overflow: hidden;
     background-color: white;
-    border-radius: 10px;
 
 }
 
@@ -109,8 +106,8 @@
     justify-content: space-evenly;
     align-items: center;
     gap: 5px;
-    padding-top: 10px;
- 
+    padding: 12px;
+
 
 }
 
@@ -162,4 +159,107 @@
 .nr-product-card-dropdown-transform {
     transform: translateY(100%);
 
+}
+
+
+.nr-section2 {
+    display: flex;
+    height: auto;
+    width: 100%;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    overflow: hidden;
+}
+
+.nr-section-image-wrapper {
+    display: flex;
+    height: auto;
+    width: 100%;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.nr-section-image-wrapper img {
+    object-fit: contain;
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+.nr-section2-writeUpContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    padding: 2% 5%;
+}
+
+.nr-section2-writeUpContainer h1 {
+    width: 100%;
+    text-align: left;
+    font-size: 60px;
+    color: pink;
+    display: flex;
+    justify-content: flex-start;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+.nr-section2-writeUpContainer p {
+    color: honeydew;
+    text-align: right;
+    font-weight: bold;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+.nr-section2-writeUp-barcode {
+    height: auto;
+    width: 100%;
+    display: flex;
+}
+
+.nr-barcode {
+    width: 40%;
+    height: auto;
+    display: flex;
+    align-items: flex-start; 
+    justify-content: flex-start;
+}
+
+.nr-section2-writeUp-barcode img {
+    color: white;
+    display: flex;
+    height: auto;
+    width: 100%;
+
+}
+
+
+.nr-section3-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.nr-section3-container h3 {
+    text-transform: uppercase;
+}
+.nr-section3-container-women,
+.nr-section3-container-men {
+    display: flex;
+    width: 100%;
+    height: auto;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }

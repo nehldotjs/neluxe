@@ -1,13 +1,16 @@
 import React, { useState } from "react";
+import { useLocation } from "react-router-dom";
 import "../styles/itemReview.css";
 
 import { FaRegHeart, FaHeart, FaPlus } from "react-icons/fa";
 import { BiPlus, BiMinus } from "react-icons/bi";
 import { FaCheck } from "react-icons/fa";
 
-import Shoe from "../assets/shoe.jpg";
 import { FaMinus } from "react-icons/fa6";
 import Discovery from "../components/Discovery";
+
+import { useData } from "../contexts/ItemProvider";
+import ProductQuery from "../components/ProductQuery";
 
 function ItemReview() {
   const [uiState, setUiState] = useState({
@@ -19,9 +22,19 @@ function ItemReview() {
   const [selectedOption, setSelectedOption] = useState({
     color: null,
     size: null,
-    available: 2,
+    available: 5,
     amount: 1
   });
+
+  const { selectedItem  } = useData();
+  const {
+    products,
+    womenClothing,
+    menClothing,
+    electronics,
+    jewelery,
+    clothing
+  } = ProductQuery();
 
   const handleAmountIncrease = (option) => {
     setSelectedOption({
@@ -71,7 +84,7 @@ function ItemReview() {
         <div className="ir-section1">
           <div className="irNameAndPriceWrapper">
             <div className="itemNameWrapper">
-              <p className="itemName">Norman Mason</p>
+              <p className="itemName">{selectedItem.title}</p>
               <button
                 onClick={() =>
                   setUiState({ ...uiState, isLike: !uiState.isLike })
@@ -80,7 +93,7 @@ function ItemReview() {
               </button>
             </div>
             <div className="itemPriceWrapper">
-              <p className="itemPrice">2 billion dollars</p>
+              <p className="itemPrice">$ {selectedItem.price}</p>
             </div>
           </div>
 
@@ -95,51 +108,52 @@ function ItemReview() {
                 </div>
               </button>
             </div>
-            <div
-              className={
-                uiState.isProductDetails
-                  ? "productDetailInformation"
-                  : "productDetailInformation close"
-              }>
-              <p>
-                trip wrote box death person rear determine doing lamp per lion
-                muscle physical consonant selection read social camp light bill
-                pair sure enter good
-              </p>
-            </div>
-            <div
-              className={
-                uiState.isProductDetails
-                  ? "productShippingAndReturnsPolicy"
-                  : "productShippingAndReturnsPolicy productShippingAndReturnsPolicyTransform"
-              }>
-              <button onClick={toggleShippingReturn}>
-                <div className="shippingAndReturnContainer">
-                  <h4>Shipping & Returns</h4>
-                  <div>
-                    {!uiState.isShippingReturn ? <BiPlus /> : <BiMinus />}
-                  </div>
-                </div>
-              </button>
 
-              <ul>
-                <li> STANDARD SHIPPING 6 WORKING DAYS</li>
-                <li>EXPRESS SHIPPING 3-4 WORKING DAYS</li>
-                <li>FREE RETURNS IN 30 DAYS</li>
-                <div
-                  className={
-                    !uiState.isShippingReturn
-                      ? "ulOverlay"
-                      : " ulOverlay ulOverlayTransform"
-                  }></div>
-              </ul>
+            <div className="productDetails-info-writeup-wrapper">
+              <div
+                className={
+                  uiState.isProductDetails
+                    ? "productDetailInformation"
+                    : "productDetailInformation close"
+                }>
+                <p>{selectedItem.description}</p>
+              </div>
+              <div
+                className={
+                  uiState.isProductDetails
+                    ? "productShippingAndReturnsPolicy"
+                    : "productShippingAndReturnsPolicy productShippingAndReturnsPolicyTransform"
+                }>
+                <button onClick={toggleShippingReturn}>
+                  <div className="shippingAndReturnContainer">
+                    <h4>Shipping & Returns</h4>
+                    <div>
+                      {!uiState.isShippingReturn ? <BiPlus /> : <BiMinus />}
+                    </div>
+                  </div>
+                </button>
+
+                <ul>
+                  <li> STANDARD SHIPPING 6 WORKING DAYS</li>
+                  <li>EXPRESS SHIPPING 3-4 WORKING DAYS</li>
+                  <li>FREE RETURNS IN 30 DAYS</li>
+                  <div
+                    className={
+                      !uiState.isShippingReturn
+                        ? "ulOverlay"
+                        : " ulOverlay ulOverlayTransform"
+                    }></div>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
 
         <div className="ir-section2">
           <div className="ir-productImageWrapper">
-            <img src={Shoe} alt="" />
+            <div className="ir-productImageWrapper-container">
+              <img src={selectedItem.image} alt="" />
+            </div>
           </div>
 
           <div className="ir-ProductColorPallet">
@@ -166,7 +180,6 @@ function ItemReview() {
                   </div>
                 )}
               </button>
-              {/* Add similar buttons for other size options */}
             </div>
             <div className="ir-productStockAvailability">
               <p>
@@ -212,7 +225,7 @@ function ItemReview() {
           </div>
         </div>
       </div>
-      <Discovery/>
+      <Discovery />
     </>
   );
 }

@@ -1,13 +1,22 @@
 import React from "react";
-import Error from "../components/Error";
-import ProductQuery from "../components/ProductQuery";
+import SplideCarousel from "../Carousel/SplideCarousel";
+import { SplideSlide } from "@splidejs/react-splide";
+
 function About() {
-  const { productData } = ProductQuery();
-  console.log(productData);
+  const cards = (
+    <>
+      <SplideSlide>
+        <h1>slider 1</h1>
+      </SplideSlide>
+      <SplideSlide>
+        <h1>slider 2</h1>
+      </SplideSlide>
+    </>
+  );
 
   return (
     <div>
-      <Error />
+      <SplideCarousel>{cards}</SplideCarousel>
     </div>
   );
 }
