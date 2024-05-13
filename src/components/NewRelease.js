@@ -15,15 +15,8 @@ import barcode from "../assets/Realistic-bar-code-icon-1.png";
 
 function NewRelease() {
   const [isDrpDwn, setIsDrpDwn] = useState({});
-  const { selectedItem, setSelectedItem, text } = useData();
-  const {
-    products,
-    womenClothing,
-    menClothing,
-    electronics,
-    jewelery,
-    clothing
-  } = ProductQuery();
+  const { setSelectedItem  } = useData();
+  const { womenClothing, menClothing, clothing } = ProductQuery();
 
   const handleMouseEnter = (id) => {
     setIsDrpDwn((prevState) => ({ ...prevState, [id]: true }));
@@ -42,43 +35,7 @@ function NewRelease() {
       </div>
 
       <div className="nr-productsWrapper">
-        <SplideCarousel>
-          {clothing.map((item) => {
-            const { id, title, price, image } = item;
-            return (
-              <SplideSlide>
-                <div
-                  key={id}
-                  className="nr-products"
-                  onMouseEnter={() => handleMouseEnter(id)}
-                  onMouseLeave={() => handleMouseLeave(id)}>
-                  <div className="nr-productImageWrapper">
-                    <img src={image} alt="" />
-                  </div>
-
-                  <div
-                    className={
-                      isDrpDwn[id]
-                        ? "nr-product-card-dropdown"
-                        : "nr-product-card-dropdown nr-product-card-dropdown-transform"
-                    }>
-                    <div className="nr-productDetails">
-                      <p className="nr-productDetailsTitle">{title}</p>
-                      <p className="nr-productDetailsPrice">$ {price}</p>
-                    </div>
-                    <div className="nr-productDetails-icons">
-                      <Link to="/item" onClick={() => setSelectedItem(item)}>
-                        <FaEye />
-                      </Link>
-                      <FaBagShopping />
-                      <BsHeart />
-                    </div>
-                  </div>
-                </div>
-              </SplideSlide>
-            );
-          })}
-        </SplideCarousel>
+        <SplideCarousel items={clothing} />
       </div>
 
       <div className="nr-section2">

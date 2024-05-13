@@ -12,7 +12,8 @@ import Nav from "./components/Nav";
 import Footer from "./screens/Footer";
 
 function ScreenHandler() {
-  const [user, setUser] = useState(true);
+  const [user] = useState(true);
+  
   return (
     <Routes>
       {user ? (

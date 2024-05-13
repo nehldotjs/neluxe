@@ -6,7 +6,9 @@
     width: 100%;
     padding: 5% 10%;
     gap: 30px;
-    z-index: 1; 
+    z-index: 1;
+
+    background-color: #f8f8f8;
 }
 
 .footerContainer hr {

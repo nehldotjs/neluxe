@@ -17,7 +17,7 @@ function ProductQuery() {
     fetchProductData();
   }, []);
 
-  const jewelery = products.filter((x) => x.category === "jewelery");
+  const jewelry = products.filter((x) => x.category === "jewelery");
   const electronics = products.filter((x) => x.category === "electronics");
   const womenClothing = products.filter(
     (x) => x.category === "women's clothing"
@@ -31,7 +31,7 @@ const clothing = products.filter(
     womenClothing,
     menClothing,
     electronics,
-    jewelery,
+    jewelry,
     clothing
   };
 }

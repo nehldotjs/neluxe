@@ -26,7 +26,7 @@ function ItemReview() {
     amount: 1
   });
 
-  const { selectedItem  } = useData();
+  const { selectedItem } = useData();
   const {
     products,
     womenClothing,
@@ -77,6 +77,18 @@ function ItemReview() {
     });
   };
 
+  const colorPalette = [
+    { id: 1, color: "pink" },
+    { id: 2, color: "red" },
+    { id: 3, color: "skyblue" },
+    { id: 4, color: "yellowgreen" }
+  ];
+  const clothSize = [
+    { id: 1, size: "XXL" },
+    { id: 2, size: "XL" },
+    { id: 3, size: "L" },
+    { id: 4, size: "M" }
+  ];
   console.log(uiState.isProductDetails);
   return (
     <>
@@ -160,26 +172,39 @@ function ItemReview() {
             <div className="ir-productColorWrapper">
               <p>Select Color</p>
               <div className="ir-productColorContainer">
-                <button
-                  className={`colorButton ${
-                    selectedOption.color === "option3" ? "selected" : ""
-                  }`}
-                  style={{ backgroundColor: "orange" }}
-                  onClick={() => handleOptionClick("option3")}>
-                  {selectedOption.color === "option3" && <FaCheck />}
-                </button>
+                {colorPalette.map((x) => {
+                  const { id, color } = x;
+                  return (
+                    <button
+                      key={id}
+                      className={`colorButton ${
+                        selectedOption.color === id ? "selected" : ""
+                      }`}
+                      style={{ backgroundColor: color }}
+                      onClick={() => handleOptionClick(id)}>
+                      {selectedOption.color === id && <FaCheck />}
+                    </button>
+                  );
+                })}
               </div>
             </div>
             <div className="ir-productSizeWrapper">
               <p>Select Size</p>
-              <button onClick={() => handleSelectSize("XL")}>
-                XL
-                {selectedOption.size === "XL" && (
-                  <div className="ir-productSizeChecker">
-                    <FaCheck className="colorCheck" />
-                  </div>
-                )}
-              </button>
+              <div className="ir-productSizeWrapperContainer">
+                {clothSize.map((x) => {
+                  const { id, size } = x
+                  return (
+                    <button onClick={() => handleSelectSize(id)}>
+                      {size}{" "}
+                      {selectedOption.size === id && (
+                        <div className="ir-productSizeChecker">
+                          <FaCheck className="colorCheck"  />
+                        </div>
+                      )}
+                    </button>
+                  );
+                })}{" "}
+              </div>
             </div>
             <div className="ir-productStockAvailability">
               <p>
@@ -205,6 +230,7 @@ function ItemReview() {
                   onClick={() => handleAmountDecrease(selectedOption.amount)}>
                   <FaMinus />
                 </button>
+
                 <p>{selectedOption.amount}</p>
                 <button
                   style={{

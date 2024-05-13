@@ -15,21 +15,21 @@
 }
 
 .discovery-carouselWrapper {
-    gap: 20px;
     width: 100%;
-    height: 350px;
+    height: 100%;
     display: flex;
+     justify-content: center;
+    align-items: center;
 }
 
 .discovery-cards {
     height: 100%;
-    width: 250px;
+    width: 200px;
     display: flex;
     position: relative;
     align-items: flex-end;
     justify-content: center;
-    overflow: hidden;
-}
+ }
 
 .discovery-card-image-wrapper {
     background-color: white;

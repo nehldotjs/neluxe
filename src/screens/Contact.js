@@ -1,9 +1,9 @@
 import React from 'react'
+import PageNotFound from '../components/PageNotFound'
 
 function Contact() {
   return (
-    <div>
-      <h1>OUR STORE</h1>
+    <div><PageNotFound />
     </div>
   )
 }
