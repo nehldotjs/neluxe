@@ -38,6 +38,8 @@ function NewRelease() {
         <SplideCarousel items={clothing} />
       </div>
 
+      {/*________________________________________________AD */}
+
       <div className="nr-section2">
         <div className="nr-section-image-wrapper">
           <img
@@ -63,6 +65,9 @@ function NewRelease() {
           </p>
         </div>
       </div>
+
+
+      {/* _________________________________________WOMEN */}
 
       <div className="nr-section3-container">
         <h3>women Collection</h3>
@@ -102,6 +107,9 @@ function NewRelease() {
           })}
         </div>
       </div>
+
+
+      {/* _________________________________________MEN */}
 
       <div className="nr-section3-container">
         <h3>Men Collection</h3>

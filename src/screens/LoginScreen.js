@@ -11,6 +11,8 @@ function LoginScreen() {
       <div className="svgAnimationWrapper">
         <SvgAnimation />
       </div>
+
+      
       <div className="login-wrapper">
         <div className="backgroundImageWrapper">
           <img src={model} alt="" />

@@ -152,3 +152,41 @@
     word-spacing: 5px;
     text-align: center;
 }
+
+/* ___________________________ */
+
+
+@media screen and (max-width:900px) {
+    .footerContainer {
+        flex-direction: column;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 100%;
+        padding: 5% 10%;
+        gap: 20px;
+        z-index: 1;
+    }
+
+    .footerSocialConnect {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .footerSection1 {
+        height: auto;
+        width: 100%;
+        gap: 20px;
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .footerShoppingCategoryLinks {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+}

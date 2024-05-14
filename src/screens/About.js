@@ -3,9 +3,14 @@ import "../styles/about.css";
 
 import shoppingImg from "../assets/shoppingIMAGE.jpg";
 import logo from "../assets/NELUXE.png";
-import bros from "../assets/pexels-artem-podrez-5726806.jpg";
+import bros from "../assets/pexels-wdnet-230544.jpg";
+
+import SplideCarousel from "../Carousel/SplideCarousel";
+import ProductQuery from "../components/ProductQuery";
 
 function About() {
+  const { clothing } = ProductQuery();
+
   return (
     <div className="about-wrapper">
       <div className="about-imageWrapprContainer">
@@ -51,6 +56,11 @@ function About() {
             </p>
           </div>
         </div>
+      </div>
+
+      <div className="about-cards-wrapper">
+        <h3>New Release</h3>
+        <SplideCarousel items={clothing} />
       </div>
     </div>
   );

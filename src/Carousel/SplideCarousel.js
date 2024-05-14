@@ -44,7 +44,7 @@ function SplideCarousel({ items }) {
           },
           576: {
             // Breakpoint for mobile devices
-            perPage: 1 // Show 1 slide per page
+            perPage: 3// Show 1 slide per page
           }
         }
       }}>

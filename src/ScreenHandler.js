@@ -8,8 +8,8 @@ import ItemReview from "./screens/ItemReview";
 import LoginScreen from "./screens/LoginScreen";
 import SignUpScreen from "./screens/SignUpScreen";
 import Dashboard from "./Dashboard";
-import Nav from "./components/Nav";
-import Footer from "./screens/Footer";
+// import Nav from "./components/Nav";
+// import Footer from "./screens/Footer";
 
 function ScreenHandler() {
   const [user] = useState(true);

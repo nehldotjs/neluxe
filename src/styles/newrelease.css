@@ -61,7 +61,7 @@
     height: auto;
     align-items: center;
     justify-content: center;
- }
+}
 
 .nr-products {
     height: 250px;
@@ -70,6 +70,7 @@
     flex-direction: column;
     position: relative;
     overflow: hidden;
+
     background-color: white;
 
 }
@@ -231,7 +232,7 @@
     width: 40%;
     height: auto;
     display: flex;
-    align-items: flex-start; 
+    align-items: flex-start;
     justify-content: flex-start;
 }
 
@@ -243,6 +244,7 @@
 
 }
 
+/* ____________________________________________________ */
 
 .nr-section3-container {
     display: flex;
@@ -253,6 +255,7 @@
 .nr-section3-container h3 {
     text-transform: uppercase;
 }
+
 .nr-section3-container-women,
 .nr-section3-container-men {
     display: flex;
@@ -262,4 +265,77 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+}
+
+@media screen and (max-width: 900px) {
+    .nr-section2 {
+        height: 300px;
+     }
+
+    .nr-section-image-wrapper {
+        height: 100%;
+    }
+
+    .nr-section-image-wrapper img {
+        object-fit: cover;
+    }
+
+    .nr-section2-writeUpContainer {
+
+        padding: 2% 5%;
+    }
+
+    .nr-section2-writeUpContainer h1 {
+        width: 100%;
+        text-align: left;
+        font-size: 20px;
+        color: pink;
+        display: flex;
+        justify-content: flex-start;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+    }
+
+    .nr-section2-writeUpContainer p {
+        color: honeydew;
+        text-align: right;
+        font-weight: bold;
+        font-size: 8px;
+        text-transform: uppercase;
+    }
+
+    .nr-section3-container-women,
+    .nr-section3-container-men {
+        display: flex;
+        width: 100%;
+        height: auto;
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .nr-products {
+        height: 250px;
+        width: 150px;
+        padding: 10px;
+    }
+
+    .nr-productImageWrapper {
+        display: flex;
+        height: 100%;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        padding: 0%;
+    }
+
+
+
+
+
+
+
+
 }

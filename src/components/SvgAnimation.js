@@ -77,6 +77,8 @@ function SvgAnimation() {
         preserveAspectRatio="none">
         <defs />
 
+        
+
         <linearGradient
           id="SVGID_1_"
           x1="2880"

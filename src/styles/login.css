@@ -74,7 +74,7 @@
     background: linear-gradient(to bottom right, #deeffc69, transparent, #80bce7);
     box-shadow: 2px 5px 10px -2px #51697a;
     border-radius: 10px;
-    backdrop-filter: blur(5px);
+    /* backdrop-filter: blur(5px); */
 
 
 }
@@ -167,4 +167,70 @@
 
 .singUp-redirectWrapper button:hover {
     color: skyblue;
+}
+
+
+/* __________________________________ */
+@media screen and (max-width:900px) {
+    .loginOverall {
+        z-index: -5;
+    }
+
+    .svgAnimationWrapper {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+
+    }
+
+    .backgroundImageWrapper {
+        display: flex;
+        position: absolute;
+    }
+
+    .backgroundImageWrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: unset;
+        margin-left: unset;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 1px solid #383838;
+    }
+
+    .loginForm {
+        display: flex;
+        height: 80vh;
+        width: 100%;
+        flex: 1;
+        position: relative;
+    }
+
+    .loginForm {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 0px;
+
+    }
+
+    .loginFormContainer {
+        justify-content: flex-start;
+        align-items: center;
+        display: flex;
+        height: 80%;
+        width: 90%;
+
+        background: linear-gradient(to bottom right, #deeffc69, transparent, #80bce7);
+        box-shadow: 2px 5px 10px -2px #51697a;
+        border-radius: 10px;
+        backdrop-filter: blur(5px);
+        z-index: 1;
+    }
+
 }

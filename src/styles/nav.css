@@ -4,6 +4,7 @@
     height: auto;
     width: 100%;
     position: relative;
+    background-color: #f8f8f8;
 }
 
 .navSecondaryWrapper {
@@ -283,4 +284,142 @@
 
 .cartWrapper .AuthContainer:hover::after {
     width: 100%;
+}
+
+.nav-mobileMenu-wrapper {
+    display: none;
+}
+
+@media screen and (max-width: 900px) {
+    .navigationSection {
+        display: none;
+    }
+
+    .nav-mobileMenu-wrapper {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        z-index: 2;
+    }
+
+    .mn-buttonWrapper {
+        background-color: #f8f8f8;
+        display: flex;
+        position: relative;
+        width: 100%;
+        z-index: 1;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0px 20px;
+    }
+
+    .mn-SearchButton {
+        width: auto;
+        border: none;
+        background: transparent;
+    }
+
+    .mn-buttonWrapper .mn-button {
+        width: auto;
+        border: none;
+        transition: all 350ms ease-in-out;
+        background: transparent;
+
+    }
+
+    .mn-dropDownMenu {
+        bottom: 0px;
+        width: 100%;
+        height: 0px;
+        display: flex;
+        position: relative;
+        justify-content: center;
+        align-items: flex-start;
+
+    }
+
+    .mn-dropDownMenuContainer {
+        width: 100%;
+        display: flex;
+        height: auto;
+        background-color: #f8f8f8;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+        position: absolute;
+        z-index: -1;
+        transition: all 350ms ease-in-out;
+        padding: 5% 10%;
+        border-radius: 0PX 0PX 30px 30px;
+    }
+
+    .mn-transform {
+        transform: translateY(-100%);
+    }
+
+    .mobilNavLink {
+        font-size: 20px;
+    }
+
+    .mn-dropDownMenuContainer-search {
+        width: 100%;
+        display: flex;
+        height: auto;
+        background-color: #f8f8f8;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        z-index: -1;
+        transition: all 350ms ease-in-out;
+        padding: 5% 10%;
+        border-radius: 0PX 0PX 30px 30px;
+    }
+
+    .mn-transform-search {
+        transform: translateY(-100%);
+    }
+
+    .mobileSearchInput {
+        display: flex;
+        height: auto;
+        width: 100%;
+        border-bottom: #363636 solid 1px;
+
+        padding: 5px 10px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .mobileSearchInput input {
+        width: 100%;
+        height: auto;
+        padding: 10px;
+        outline: none;
+        border: none;
+        font-size: 20px;
+        letter-spacing: 2px;
+        background: transparent;
+    }
+
+
+
+
+    .MobileLoginBtn {
+        width: 100%;
+        color: white;
+        padding: 10px;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        background-color: #383838;
+        border: 1px solid #383838;
+    }
+
+
+
+
 }
