@@ -270,7 +270,7 @@
 @media screen and (max-width: 900px) {
     .nr-section2 {
         height: 300px;
-     }
+    }
 
     .nr-section-image-wrapper {
         height: 100%;
@@ -318,7 +318,7 @@
     .nr-products {
         height: 250px;
         width: 150px;
-        padding: 10px;
+        padding: unset;
     }
 
     .nr-productImageWrapper {
@@ -328,12 +328,56 @@
         justify-content: center;
         align-items: center;
         margin: auto;
-        padding: 0%;
+        padding: 10px;
     }
 
+    .nr-product-card-dropdown {
+        width: 100%;
+    }
 
+    .nr-productDetails {
+        display: flex;
+        height: auto;
+        width: 100%;
+        bottom: 0px;
+        gap: 5px;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
 
+    .nr-productDetails .nr-productDetailsTitle {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        position: relative;
+        font-size: 12px;
+        text-align: center;
 
+    }
+
+    .nr-productDetails .nr-productDetailsPrice {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        font-weight: bold;
+    }
+
+    .nr-productDetails-icons {
+        width: 100%;
+        height: auto;
+        display: flex;
+        transition: all 350ms ease-in-out;
+        cursor: pointer;
+        justify-content: space-between;
+        align-items: center;
+
+    }
 
 
 

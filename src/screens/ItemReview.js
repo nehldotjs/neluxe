@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { useLocation } from "react-router-dom";
 import "../styles/itemReview.css";
 
 import { FaRegHeart, FaHeart, FaPlus } from "react-icons/fa";
@@ -10,7 +9,7 @@ import { FaMinus } from "react-icons/fa6";
 import Discovery from "../components/Discovery";
 
 import { useData } from "../contexts/ItemProvider";
-import ProductQuery from "../components/ProductQuery";
+// import ProductQuery from "../components/ProductQuery";
 
 function ItemReview() {
   const [uiState, setUiState] = useState({
@@ -27,14 +26,14 @@ function ItemReview() {
   });
 
   const { selectedItem } = useData();
-  const {
-    products,
-    womenClothing,
-    menClothing,
-    electronics,
-    jewelery,
-    clothing
-  } = ProductQuery();
+  // const {
+  //   products,
+  //   womenClothing,
+  //   menClothing,
+  //   electronics,
+  //   jewelery,
+  //   clothing
+  // } = ProductQuery();
 
   const handleAmountIncrease = (option) => {
     setSelectedOption({
@@ -89,12 +88,11 @@ function ItemReview() {
     { id: 3, size: "L" },
     { id: 4, size: "M" }
   ];
-  console.log(uiState.isProductDetails);
   return (
     <>
       <div className="IR-container">
         <div className="ir-section1">
-          <div className="irNameAndPriceWrapper">
+          <div className="irNameAndPriceWrapper it-web">
             <div className="itemNameWrapper">
               <p className="itemName">{selectedItem.title}</p>
               <button
@@ -168,6 +166,21 @@ function ItemReview() {
             </div>
           </div>
 
+          <div className="irNameAndPriceWrapper it-mobile">
+            <div className="itemNameWrapper">
+              <p className="itemName">{selectedItem.title}</p>
+              <button
+                onClick={() =>
+                  setUiState({ ...uiState, isLike: !uiState.isLike })
+                }>
+                {!uiState.isLike ? <FaRegHeart /> : <FaHeart />}
+              </button>
+            </div>
+            <div className="itemPriceWrapper">
+              <p className="itemPrice">$ {selectedItem.price}</p>
+            </div>
+          </div>
+
           <div className="ir-ProductColorPallet">
             <div className="ir-productColorWrapper">
               <p>Select Color</p>
@@ -192,13 +205,13 @@ function ItemReview() {
               <p>Select Size</p>
               <div className="ir-productSizeWrapperContainer">
                 {clothSize.map((x) => {
-                  const { id, size } = x
+                  const { id, size } = x;
                   return (
-                    <button onClick={() => handleSelectSize(id)}>
+                    <button onClick={() => handleSelectSize(id)} key={id}>
                       {size}{" "}
                       {selectedOption.size === id && (
                         <div className="ir-productSizeChecker">
-                          <FaCheck className="colorCheck"  />
+                          <FaCheck className="colorCheck" />
                         </div>
                       )}
                     </button>
