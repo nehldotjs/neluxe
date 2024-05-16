@@ -12,12 +12,9 @@ function PageNotFound() {
           <h2>! 404 !</h2>
           <h1>Oops! We're Sorry.</h1>
           <p>
-            It seems like you've stumbled upon a construction site. Our
-            sincerest apologies for the inconvenience! The page you're trying to
-            access is currently under maintenance to enhance your browsing
-            experience. Rest assured, our team is hard at work to bring it back
-            online as soon as possible. We promise to have everything up and
-            running smoothly shortly.
+             The page you're trying to access is currently under maintenance to
+            enhance your browsing experience. We promise to have
+            everything up and running smoothly shortly.
           </p>
         </div>
       </div>

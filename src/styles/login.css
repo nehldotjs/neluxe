@@ -202,15 +202,13 @@
         border-bottom: 1px solid #383838;
     }
 
+
     .loginForm {
         display: flex;
         height: 80vh;
         width: 100%;
         flex: 1;
         position: relative;
-    }
-
-    .loginForm {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -223,7 +221,7 @@
         justify-content: flex-start;
         align-items: center;
         display: flex;
-        height: 80%;
+        height: auto;
         width: 90%;
 
         background: linear-gradient(to bottom right, #deeffc69, transparent, #80bce7);

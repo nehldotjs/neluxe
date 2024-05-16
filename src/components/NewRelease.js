@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../styles/newrelease.css";
 import { BsHeart } from "react-icons/bs";
 import { FaBagShopping, FaEye } from "react-icons/fa6";
@@ -7,15 +7,17 @@ import { Link } from "react-router-dom";
 import ProductQuery from "../components/ProductQuery";
 import { useData } from "../contexts/ItemProvider";
 
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 import SplideCarousel from "../Carousel/SplideCarousel";
-import { SplideSlide } from "@splidejs/react-splide";
 
 import pexelAd from "../assets/pexelAd.jpg";
 import barcode from "../assets/Realistic-bar-code-icon-1.png";
 
 function NewRelease() {
   const [isDrpDwn, setIsDrpDwn] = useState({});
-  const { setSelectedItem  } = useData();
+  const { setSelectedItem } = useData();
   const { womenClothing, menClothing, clothing } = ProductQuery();
 
   const handleMouseEnter = (id) => {
@@ -24,6 +26,18 @@ function NewRelease() {
   const handleMouseLeave = (id) => {
     setIsDrpDwn((prevState) => ({ ...prevState, [id]: false }));
   };
+
+  useEffect(() => {
+    AOS.init({
+      offset: 200,
+      delay: 100,
+      duration: 1000,
+      easing: "ease-in-out",
+      once: true,
+      mirror: false
+    });
+    AOS.refresh();
+  });
 
   return (
     <div className="nr-wrapper">
@@ -66,7 +80,6 @@ function NewRelease() {
         </div>
       </div>
 
-
       {/* _________________________________________WOMEN */}
 
       <div className="nr-section3-container">
@@ -76,6 +89,7 @@ function NewRelease() {
             const { id, title, price, image } = item;
             return (
               <div
+                data-aos="zoom-in-up"
                 key={id}
                 className="nr-products"
                 onMouseEnter={() => handleMouseEnter(id)}
@@ -108,16 +122,16 @@ function NewRelease() {
         </div>
       </div>
 
-
       {/* _________________________________________MEN */}
 
       <div className="nr-section3-container">
         <h3>Men Collection</h3>
-        <div className="nr-section3-container-men">
+        <div className="nr-section3-container-men" >
           {menClothing.map((item) => {
             const { id, title, price, image } = item;
             return (
               <div
+                data-aos="zoom-in-up"
                 key={id}
                 className="nr-products"
                 onMouseEnter={() => handleMouseEnter(id)}

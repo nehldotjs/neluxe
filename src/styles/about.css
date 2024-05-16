@@ -168,7 +168,6 @@
         width: 100%;
         position: fixed;
         z-index: -2;
-        background-color: red;
     }
 
     .shopping-image {
@@ -178,9 +177,6 @@
         object-fit: cover;
 
     }
-
-
-
 
     .about-imageWrapper-logo {
         object-fit: contain;

@@ -1,21 +1,22 @@
-import React, { useState, useEffect } from "react";
-import ScreenDetector from "../components/ScreenDetector";
+import React, { useEffect } from "react";
 
 import "../styles/home.css";
 
 import heroImg from "../assets/pexels-artem-podrez-5726806.jpg";
 import NewRelease from "../components/NewRelease";
+
 function Home() {
-  // const { screenWidth } = ScreenDetector();
+  
+
   return (
     <div className="homeWrapper">
-      <div className="heroSection-Wrapper">
-        <div className="shopNowBtn">
+      <div className="heroSection-Wrapper" >
+        <div className="shopNowBtn" >
           <button>
-            <p>Shop Now</p>
+            <p >Shop Now</p>
           </button>
         </div>
-        <img src={heroImg} alt="pexels-artem-podrez-5726806.jpg" />
+        <img src={heroImg} alt="pexels-artem-podrez-5726806.jpg"  />
       </div>
       <NewRelease />
     </div>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
 import "@splidejs/react-splide/css";
@@ -6,6 +6,9 @@ import { Link } from "react-router-dom";
 import { FaBagShopping, FaEye } from "react-icons/fa6";
 import { BsHeart } from "react-icons/bs";
 import { useData } from "../contexts/ItemProvider";
+
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function SplideCarousel({ items }) {
   const [isDrpDwn, setIsDrpDwn] = useState({});
@@ -17,6 +20,18 @@ function SplideCarousel({ items }) {
   const handleMouseLeave = (id) => {
     setIsDrpDwn((prevState) => ({ ...prevState, [id]: false }));
   };
+
+  useEffect(() => {
+    AOS.init({
+      offset: 200,
+      delay: 100,
+      duration: 1000,
+      easing: "ease-in-out",
+      once: true,
+      mirror: false
+    });
+    AOS.refresh();
+  });
   return (
     <Splide
       options={{
@@ -44,7 +59,7 @@ function SplideCarousel({ items }) {
           },
           576: {
             // Breakpoint for mobile devices
-            perPage: 3// Show 1 slide per page
+            perPage: 3 // Show 1 slide per page
           }
         }
       }}>
@@ -52,12 +67,14 @@ function SplideCarousel({ items }) {
         const { id, title, price, image } = item;
         return (
           <SplideSlide
+            data-aos="zoom-in-up"
             key={id}
             className="nr-products"
             onMouseEnter={() => handleMouseEnter(id)}
             onMouseLeave={() => handleMouseLeave(id)}>
+              
             <div className="nr-productImageWrapper">
-              <img src={image} alt="" />
+              <img src={image} alt="" data-aos="fade-zoom-in" />
             </div>
 
             <div
