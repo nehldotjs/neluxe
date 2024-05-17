@@ -1,5 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../styles/about.css";
+
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 import shoppingImg from "../assets/shoppingIMAGE.jpg";
 import logo from "../assets/NELUXE.png";
@@ -10,6 +13,18 @@ import ProductQuery from "../components/ProductQuery";
 
 function About() {
   const { clothing } = ProductQuery();
+
+  useEffect(() => {
+    AOS.init({
+      offset: 200,
+      delay: 100,
+      duration: 1000,
+      easing: "ease-in-out",
+      once: true,
+      mirror: false
+    });
+    AOS.refresh();
+  });
 
   return (
     <div className="about-wrapper">
@@ -26,10 +41,10 @@ function About() {
       <div className="about-context">
         <div className="about-writeup">
           <div className="about-writeup-container">
-            <h3>
+            <h3 data-aos="zoom-in-up">
               Your Destination for Quality Fashion and Seamless Online Shopping
             </h3>
-            <p>
+            <p data-aos="zoom-in-up">
               At Neluxe, we understand the importance of quality in every stitch
               and fabric. That's why we curate a meticulously selected
               collection of fashion clothing brands renowned for their
@@ -39,13 +54,13 @@ function About() {
             </p>
           </div>
         </div>
-        <div className="about-context-imageWrapper">
+        <div className="about-context-imageWrapper" data-aos="zoom-in-up">
           <img src={bros} alt="" />
         </div>
         <div className="about-writeup-second ">
           <div className="about-writeup-second-container ">
-            <h3>Your perfect fashion find awaits!</h3>
-            <p>
+            <h3 data-aos="zoom-in-up">Your perfect fashion find awaits!</h3>
+            <p data-aos="zoom-in-up">
               What sets Neluxe apart is our commitment to customer satisfaction.
               We prioritize transparency, ensuring that every product detail,
               from sizing to material composition, is readily available,
@@ -56,11 +71,10 @@ function About() {
             </p>
           </div>
         </div>
-      </div>
-
       <div className="about-cards-wrapper">
-        <h3>New Release</h3>
+        <h3 data-aos="zoom-in-up">New Release</h3>
         <SplideCarousel items={clothing} />
+      </div>
       </div>
     </div>
   );

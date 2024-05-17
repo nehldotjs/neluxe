@@ -29,7 +29,7 @@ function NewRelease() {
 
   useEffect(() => {
     AOS.init({
-      offset: 200,
+      offset: 300,
       delay: 100,
       duration: 1000,
       easing: "ease-in-out",
@@ -42,9 +42,9 @@ function NewRelease() {
   return (
     <div className="nr-wrapper">
       <div className="nr-header-container">
-        <h3> New Release </h3>
+        <h3 data-aos="fade-right"> New Release </h3>
         <button>
-          <h5>EXPLORE All</h5>
+          <h5 data-aos="fade-left">EXPLORE All</h5>
         </button>
       </div>
 
@@ -57,20 +57,21 @@ function NewRelease() {
       <div className="nr-section2">
         <div className="nr-section-image-wrapper">
           <img
+            data-aos="zoom-in-up"
             src={pexelAd}
             alt="Photo by Godisable Jacob: https://www.pexels.com/photo/shallow-focus-photography-woman-in-black-and-pink-parka-jacket-905247/"
           />
         </div>
         <div className="nr-section2-writeUpContainer">
           <div className="nr-section2-writeUp-barcode">
-            <h1>
+            <h1 data-aos="fade-left">
               Whats Your <br /> Style <br /> ???!!!
             </h1>
-            <div className="nr-barcode">
-              <img src={barcode} alt="" />
+            <div className="nr-barcode" data-aos="fade-left">
+              <img src={barcode} alt="" data-aos="zoom-in-up" />
             </div>
           </div>
-          <p>
+          <p data-aos="zoom-in-up">
             In the fast-paced world of fashion, finding the perfect blend of
             style, quality, and convenience can often feel like an endless
             quest. Enter Neluxe your ultimate online shopping destination,
@@ -83,7 +84,7 @@ function NewRelease() {
       {/* _________________________________________WOMEN */}
 
       <div className="nr-section3-container">
-        <h3>women Collection</h3>
+        <h3 data-aos="fade-right">women Collection</h3>
         <div className="nr-section3-container-women">
           {womenClothing.map((item) => {
             const { id, title, price, image } = item;
@@ -125,8 +126,8 @@ function NewRelease() {
       {/* _________________________________________MEN */}
 
       <div className="nr-section3-container">
-        <h3>Men Collection</h3>
-        <div className="nr-section3-container-men" >
+        <h3 data-aos="fade-right">Men Collection</h3>
+        <div className="nr-section3-container-men">
           {menClothing.map((item) => {
             const { id, title, price, image } = item;
             return (

@@ -6,7 +6,8 @@
     justify-content: center;
     position: relative;
     flex-direction: column;
-
+    /* background-color: #f8f8f8; */
+    overflow: hidden;
 }
 
 .about-imageWrapprContainer {
@@ -28,6 +29,7 @@
     top: 0px;
     position: fixed;
     z-index: -2;
+    overflow: hidden;
 
 }
 
@@ -145,10 +147,10 @@
 
 .about-cards-wrapper {
     background-color: #f8f8f8;
-    padding: 0px 10%;
-    gap: 20px;
-    display: flex;
     flex-direction: column;
+    /* padding: 0px 5%; */
+    display: flex;
+    gap: 20px;
 }
 
 
@@ -237,12 +239,7 @@
     }
 
     .about-cards-wrapper {
-        background-color: #f8f8f8;
-        padding: 0px 10%;
-        gap: 20px;
-        display: flex;
-        width: 100%;
-        height: auto;
-        flex-direction: column;
+        padding-bottom: 5%;
+
     }
 }
