@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/neluxe/static/css/main.feb80601.css",
-    "main.js": "/neluxe/static/js/main.320fe458.js",
+    "main.css": "/neluxe/static/css/main.8ab2400c.css",
+    "main.js": "/neluxe/static/js/main.bf90ea32.js",
     "static/js/787.69485e9c.chunk.js": "/neluxe/static/js/787.69485e9c.chunk.js",
     "static/media/model.png": "/neluxe/static/media/model.73ce61b4bb22a5fec5aa.png",
     "static/media/shoppingIMAGE.jpg": "/neluxe/static/media/shoppingIMAGE.510f16593f823e6d109a.jpg",
@@ -12,12 +12,12 @@
     "static/media/NELUXE.png": "/neluxe/static/media/NELUXE.30aaac4a90153f55ff60.png",
     "static/media/Realistic-bar-code-icon-1.png": "/neluxe/static/media/Realistic-bar-code-icon-1.a38f55777bd1d9dbe47a.png",
     "index.html": "/neluxe/index.html",
-    "main.feb80601.css.map": "/neluxe/static/css/main.feb80601.css.map",
-    "main.320fe458.js.map": "/neluxe/static/js/main.320fe458.js.map",
+    "main.8ab2400c.css.map": "/neluxe/static/css/main.8ab2400c.css.map",
+    "main.bf90ea32.js.map": "/neluxe/static/js/main.bf90ea32.js.map",
     "787.69485e9c.chunk.js.map": "/neluxe/static/js/787.69485e9c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.feb80601.css",
-    "static/js/main.320fe458.js"
+    "static/css/main.8ab2400c.css",
+    "static/js/main.bf90ea32.js"
   ]
 }
